@@ -4,20 +4,24 @@
              BackgroundColor="{DynamicResource SecondaryColor}">
 
     <Grid RowSpacing="25" RowDefinitions="*,*" ColumnDefinitions="*,*">
-        <VerticalStackLayout>
-            <Label Text="Text"/>
+        <VerticalStackLayout x:Name="Layout00">
+            <Label Text="Layout 00"/>
+            <Label Text="{Binding Source={RelativeSource AncestorType={x:Type VerticalStackLayout}}, Path=ZIndex}"/>
             <Button Text="Button" Clicked="OnButtonClicked"/>
         </VerticalStackLayout>       
-         <VerticalStackLayout Grid.Column="1">
-            <Label Text="Text"/>
+         <VerticalStackLayout x:Name="Layout01" Grid.Column="1">
+            <Label Text="Layout 01"/>
+            <Label Text="{Binding Source={RelativeSource AncestorType={x:Type VerticalStackLayout}}, Path=ZIndex}"/>
             <Button Text="Button" Clicked="OnButtonClicked"/>
         </VerticalStackLayout>       
-         <VerticalStackLayout Grid.Row="1">
-            <Label Text="Text"/>
+         <VerticalStackLayout x:Name="Layout10" Grid.Row="1">
+            <Label Text="Layout 10"/>
+            <Label Text="{Binding Source={RelativeSource AncestorType={x:Type VerticalStackLayout}}, Path=ZIndex}"/>
             <Button Text="Button" Clicked="OnButtonClicked"/>
         </VerticalStackLayout>        
-        <VerticalStackLayout Grid.Row="1" Grid.Column="1">
-            <Label Text="Text"/>
+        <VerticalStackLayout x:Name="Layout11" Grid.Row="1" Grid.Column="1">
+            <Label Text="Layout 11"/>
+            <Label Text="{Binding Source={RelativeSource AncestorType={x:Type VerticalStackLayout}}, Path=ZIndex}"/>
             <Button Text="Button" Clicked="OnButtonClicked"/>
         </VerticalStackLayout>        
     </Grid>
